@@ -13,3 +13,5 @@ ACVars.pm
 *.spec
 *~
 
+debian/warewulf-common
+.pc

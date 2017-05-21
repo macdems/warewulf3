@@ -1,7 +1,7 @@
 SUBDIRS = 
 
 confdir = $(sysconfdir)/warewulf/
-initdir = $(sysconfdir)/warewulf/vnfs/include/etc/rc.d/init.d/
+initdir = $(sysconfdir)/warewulf/vnfs/include/etc/init.d/
 sconfdir = $(sysconfdir)/warewulf/vnfs/include/etc/sysconfig
 profiledir = $(sysconfdir)/profile.d/
 

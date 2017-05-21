@@ -14,3 +14,7 @@ ACVars.pm
 *~
 
 etc/warewulf-httpd.conf
+debian/tmp
+debian/warewulf-provision
+debian/warewulf-provision-server
+.pc

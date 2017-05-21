@@ -1,0 +1,5 @@
+debian/warewulf-ipmi
+initramfs/_work/
+initramfs/capability.cpio
+initramfs/ipmitool
+initramfs/rootfs/

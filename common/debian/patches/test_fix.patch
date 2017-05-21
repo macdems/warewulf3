@@ -1,0 +1,16 @@
+Description: Fixed warewulf-common test
+ Right now the test suite fails due to the added GITVERSION to wwconfig.
+ This is a simple fix to ignore it (it may be empty).
+--- warewulf-common-3.7+1git43951bf.orig/t/10-acvars.t
++++ warewulf-common-3.7+1git43951bf/t/10-acvars.t
+@@ -38,8 +38,8 @@ plan("tests" => (
+ $acvars = new_ok("Warewulf::ACVars");
+ can_ok($acvars, "new", "get", "vars");
+ 
+-# Make sure we account for all the variables that exist currently.
+-cmp_ok(scalar(@var_names), '==', scalar($acvars->vars()),
++# Make sure we account for all the variables that exist currently (we explicitly ignore GITVERSION).
++cmp_ok(scalar(@var_names), '==', scalar($acvars->vars())-1,
+        "All Warewulf::ACVars variable names accounted for");
+ # Make sure static and non-static calls both work (and match).
+ @a = $acvars->vars();

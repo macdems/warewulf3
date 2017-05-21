@@ -1,0 +1,19 @@
+Source: warewulf-vnfs
+Section: multiverse/net
+Priority: optional
+Maintainer: Maciej Dems <maciej.dems@p.lodz.pl>
+Build-Depends: debhelper (>=9), autotools-dev, warewulf-common
+Standards-Version: 3.9.6
+Homepage: https://github.com/warewulf/warewulf3
+#Vcs-Git: git://anonscm.debian.org/collab-maint/warewulf-vnfs.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/warewulf-vnfs.git
+
+Package: warewulf-vnfs
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, nfs-kernel-server, nfs-common, debootstrap, warewulf-common
+Description: Warewulf VNFS Module
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This is the VNFS module which supports the creation and management of
+ Virtual Node FileSystem objects.

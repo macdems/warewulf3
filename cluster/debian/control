@@ -1,0 +1,29 @@
+Source: warewulf-cluster
+Section: multiverse/net
+Priority: optional
+Maintainer: Maciej Dems <maciej.dems@p.lodz.pl>
+Build-Depends: debhelper (>=9), autotools-dev, warewulf-common
+Standards-Version: 3.9.6
+Homepage: https://github.com/warewulf/warewulf3
+#Vcs-Git: git://anonscm.debian.org/collab-maint/warewulf-cluster.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/warewulf-cluster.git
+
+Package: warewulf-cluster
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, warewulf-common, warewulf-provision, nfs-kernel-server, nfs-common, debootstrap
+Description: A suite of tools for clustering
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This package contains tools to facilitate management of a Cluster
+ with Warewulf.
+
+Package: warewulf-cluster-node
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A suite of tools for clustering
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This is the cluster-node module, that is installed onto the
+ provisioned nodes.

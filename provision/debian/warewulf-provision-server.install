@@ -1,0 +1,16 @@
+etc/warewulf/dhcpd-template.conf
+etc/apache2/conf-available/warewulf-httpd.conf
+usr/bin/*
+usr/lib/warewulf/cgi-bin/
+usr/share/warewulf/ldlinux.c32
+usr/share/warewulf/ldlinux.e32
+usr/share/warewulf/ldlinux.e64
+usr/share/warewulf/lpxelinux.0
+usr/share/warewulf/pxelinux.0
+usr/share/warewulf/syslinux32.efi
+usr/share/warewulf/syslinux64.efi
+usr/share/perl5/Warewulf/Event/Bootstrap.pm
+usr/share/perl5/Warewulf/Event/Dhcp.pm
+usr/share/perl5/Warewulf/Event/Pxelinux.pm
+usr/share/perl5/Warewulf/Module/Cli/Pxe.pm
+usr/share/perl5/Warewulf/Module/Cli/Dhcp.pm

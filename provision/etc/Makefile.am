@@ -5,7 +5,7 @@ bash_completiondir = $(sysconfdir)/bash_completion.d/
 
 # Check for Debian
 if ISDEB
-httpdir = $(sysconfdir)/apache2/conf.d/
+httpdir = $(sysconfdir)/apache2/conf-available/
 else
 # Assume RHEL Layout
 httpdir = $(sysconfdir)/httpd/conf.d/

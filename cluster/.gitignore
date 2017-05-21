@@ -13,3 +13,7 @@ ACVars.pm
 *.spec
 *~
 
+debian/tmp
+debian/warewulf-cluster
+debian/warewulf-cluster-node
+.pc

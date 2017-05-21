@@ -35,3 +35,16 @@ provision/initramfs/capabilities/*/capability.cpio
 provision/initramfs/capabilities/*/rootfs/
 provision/initramfs/initramfs.cpio
 provision/initramfs/rootfs/
+
+warewulf-*.orig.tar.*
+warewulf-*.debian.tar.*
+warewulf-*.dsc
+warewulf-*.deb
+warewulf-*.changes
+*/debian/debhelper-build-stamp
+*/debian/files
+*/debian/*.debhelper.log
+*/debian/*.debhelper
+*/debian/*.substvars
+*.build
+*.upload
