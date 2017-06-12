@@ -1,8 +1,8 @@
 Description: Replace default SSH key to RSA
  The security of DSS is disputed and therefore it is not supported by
  Ubuntu. Hence Warewulf needs t replace it with RSA key.
---- warewulf-cluster-3.7git.orig/bin/cluster-env
-+++ warewulf-cluster-3.7git/bin/cluster-env
+--- warewulf-cluster-3.7+1git43951bf.orig/bin/cluster-env
++++ warewulf-cluster-3.7+1git43951bf/bin/cluster-env
 @@ -17,7 +17,7 @@ fi
  if [ ! -f "$HOME/.ssh/config" -a ! -f "$HOME/.ssh/cluster" ]; then
      echo "Configuring SSH for cluster access"
@@ -12,3 +12,27 @@ Description: Replace default SSH key to RSA
      cat $HOME/.ssh/cluster.pub >> $HOME/.ssh/authorized_keys
      chmod 0600 $HOME/.ssh/authorized_keys
  
+--- warewulf-cluster-3.7+1git43951bf.orig/libexec/wwinit/50-ssh_keys.init
++++ warewulf-cluster-3.7+1git43951bf/libexec/wwinit/50-ssh_keys.init
+@@ -32,7 +32,7 @@ fi
+ wwprint "Checking ssh keys for root"
+ if ! wwtest test -f "$HOME/.ssh/cluster"; then
+     wwprint "Generating ssh keypairs for local cluster access:\n"
+-    if ! wwrun ssh-keygen -t dsa -f $HOME/.ssh/cluster -N ''; then
++    if ! wwrun ssh-keygen -t rsa -f $HOME/.ssh/cluster -N '' -C 'Warewulf Cluster root key'; then
+         exit 255
+     fi
+     wwprint "Updating authorized keys"
+@@ -46,9 +46,9 @@ wwprint "Checking root's ssh config"
+ if ! wwtest test -f "$HOME/.ssh/config"; then
+     wwprint "Creating ssh configuration for root"
+     echo "Host *" >> $HOME/.ssh/config
+-    echo "   IdentityFile ~/.ssh/identity" >> $HOME/.ssh/config
+-    echo "   IdentityFile ~/.ssh/id_rsa" >> $HOME/.ssh/config
+-    echo "   IdentityFile ~/.ssh/id_dsa" >> $HOME/.ssh/config
++    test -f $HOME/.ssh/identity && echo "   IdentityFile ~/.ssh/identity" >> $HOME/.ssh/config
++    test -f $HOME/.ssh/id_rsa && echo "   IdentityFile ~/.ssh/id_rsa" >> $HOME/.ssh/config
++    test -f $HOME/.ssh/id_dsa && echo "   IdentityFile ~/.ssh/id_dsa" >> $HOME/.ssh/config
+     echo "   IdentityFile ~/.ssh/cluster" >> $HOME/.ssh/config
+     echo "   StrictHostKeyChecking=no" >> $HOME/.ssh/config
+     chmod 0600 $HOME/.ssh/config

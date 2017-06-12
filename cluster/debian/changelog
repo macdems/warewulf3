@@ -1,3 +1,9 @@
+warewulf-cluster (3.7+1git43951bf-2) xenial; urgency=medium
+
+  * Fixes to SSH keys.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Mon, 12 Jun 2017 10:07:20 +0200
+
 warewulf-cluster (3.7+1git43951bf-1) xenial; urgency=medium
 
   * Upstream git 43951bf.

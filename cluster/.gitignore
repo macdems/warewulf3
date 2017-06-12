@@ -16,4 +16,3 @@ ACVars.pm
 debian/tmp
 debian/warewulf-cluster
 debian/warewulf-cluster-node
-.pc

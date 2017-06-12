@@ -32,7 +32,7 @@ fi
 wwprint "Checking ssh keys for root"
 if ! wwtest test -f "$HOME/.ssh/cluster"; then
     wwprint "Generating ssh keypairs for local cluster access:\n"
-    if ! wwrun ssh-keygen -t dsa -f $HOME/.ssh/cluster -N ''; then
+    if ! wwrun ssh-keygen -t rsa -f $HOME/.ssh/cluster -N '' -C 'Warewulf Cluster root key'; then
         exit 255
     fi
     wwprint "Updating authorized keys"
@@ -46,9 +46,9 @@ wwprint "Checking root's ssh config"
 if ! wwtest test -f "$HOME/.ssh/config"; then
     wwprint "Creating ssh configuration for root"
     echo "Host *" >> $HOME/.ssh/config
-    echo "   IdentityFile ~/.ssh/identity" >> $HOME/.ssh/config
-    echo "   IdentityFile ~/.ssh/id_rsa" >> $HOME/.ssh/config
-    echo "   IdentityFile ~/.ssh/id_dsa" >> $HOME/.ssh/config
+    test -f $HOME/.ssh/identity && echo "   IdentityFile ~/.ssh/identity" >> $HOME/.ssh/config
+    test -f $HOME/.ssh/id_rsa && echo "   IdentityFile ~/.ssh/id_rsa" >> $HOME/.ssh/config
+    test -f $HOME/.ssh/id_dsa && echo "   IdentityFile ~/.ssh/id_dsa" >> $HOME/.ssh/config
     echo "   IdentityFile ~/.ssh/cluster" >> $HOME/.ssh/config
     echo "   StrictHostKeyChecking=no" >> $HOME/.ssh/config
     chmod 0600 $HOME/.ssh/config
