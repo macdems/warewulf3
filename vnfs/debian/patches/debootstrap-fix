@@ -1,0 +1,19 @@
+Description: Fix for debootstrap
+ .
+ warewulf-vnfs (3.8+git20180111+7f4b80e-1) xenial; urgency=medium
+ .
+   * Upstream commit 7f4b80e.
+Author: Maciej Dems <maciej.dems@p.lodz.pl>
+
+--- warewulf-vnfs-3.8+git20180111+7f4b80e.orig/libexec/wwmkchroot/include-ubuntu
++++ warewulf-vnfs-3.8+git20180111+7f4b80e/libexec/wwmkchroot/include-ubuntu
+@@ -57,8 +57,7 @@ prechroot() {
+         ARCH="amd64"
+     fi
+ 
+-    mkdir -p $CHROOTDIR/etc
+-    cp -rap /etc/apt $CHROOTDIR/etc
++    mkdir -p $CHROOTDIR/etc/apt
+ 
+     DEB_SRCS_DIRNAME=`dirname $DEB_SRCS`
+     mkdir -m 0755 -p $CHROOTDIR/$DEB_SRCS_DIRNAME
