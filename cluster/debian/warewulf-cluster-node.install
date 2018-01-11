@@ -1,0 +1,3 @@
+etc/sysconfig/wwfirstboot.conf
+etc/init.d/wwfirstboot
+usr/lib/warewulf/wwfirstboot/*

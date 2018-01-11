@@ -1,0 +1,33 @@
+Source: warewulf-provision
+Section: multiverse/net
+Priority: optional
+Maintainer: Maciej Dems <maciej.dems@p.lodz.pl>
+Build-Depends: debhelper (>=9), autotools-dev, libselinux1-dev, libsepol1-dev, cpio, warewulf-common, uuid-dev, liblzma-dev
+#, uuid-dev, libdevmapper-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/warewulf/warewulf3
+#Vcs-Git: git://anonscm.debian.org/collab-maint/warewulf-provision.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/warewulf-provision.git
+
+Package: warewulf-provision
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cpio, warewulf-common
+Recommends: warewulf-provision-server
+Description: Warewulf - Provisioning Module
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This package contains the core provisioning components and
+ administrative tools.  To actually provision systems, the
+ %warewulf-provision-server package is also required.
+
+Package: warewulf-provision-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, warewulf-common, apache2, libapache2-mod-perl2, tftpd-hpa, isc-dhcp-server, ntp
+Description: Warewulf - Provisioning Module
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This package contains the CGI scripts and event components to actually
+ provision systems.  Systems used solely for administration of Warewulf
+ do not require this package.

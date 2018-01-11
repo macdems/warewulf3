@@ -1,0 +1,23 @@
+Description: Moved Apache config to proper location
+--- warewulf-provision-3.7git.orig/etc/Makefile.am
++++ warewulf-provision-3.7git/etc/Makefile.am
+@@ -5,7 +5,7 @@ bash_completiondir = $(sysconfdir)/bash_
+ 
+ # Check for Debian
+ if ISDEB
+-httpdir = $(sysconfdir)/apache2/conf.d/
++httpdir = $(sysconfdir)/apache2/conf-available/
+ else
+ # Assume RHEL Layout
+ httpdir = $(sysconfdir)/httpd/conf.d/
+--- warewulf-provision-3.7git.orig/etc/Makefile.in
++++ warewulf-provision-3.7git/etc/Makefile.in
+@@ -299,7 +299,7 @@ bash_completiondir = $(sysconfdir)/bash_
+ @ISDEB_FALSE@httpdir = $(sysconfdir)/httpd/conf.d/
+ 
+ # Check for Debian
+-@ISDEB_TRUE@httpdir = $(sysconfdir)/apache2/conf.d/
++@ISDEB_TRUE@httpdir = $(sysconfdir)/apache2/conf-available/
+ httpdconfdir = $(httpdir)
+ dist_conf_DATA = provision.conf livesync.conf dhcpd-template.conf
+ dist_httpdconf_DATA = warewulf-httpd.conf

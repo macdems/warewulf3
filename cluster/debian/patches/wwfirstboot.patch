@@ -1,0 +1,23 @@
+Description: wwfirstboot location
+--- warewulf-cluster-3.7git.orig/etc/Makefile.am
++++ warewulf-cluster-3.7git/etc/Makefile.am
+@@ -1,7 +1,7 @@
+ SUBDIRS = 
+ 
+ confdir = $(sysconfdir)/warewulf/
+-initdir = $(sysconfdir)/warewulf/vnfs/include/etc/rc.d/init.d/
++initdir = $(sysconfdir)/warewulf/vnfs/include/etc/init.d/
+ sconfdir = $(sysconfdir)/warewulf/vnfs/include/etc/sysconfig
+ profiledir = $(sysconfdir)/profile.d/
+ 
+--- warewulf-cluster-3.7git.orig/etc/Makefile.in
++++ warewulf-cluster-3.7git/etc/Makefile.in
+@@ -291,7 +291,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = 
+ confdir = $(sysconfdir)/warewulf/
+-initdir = $(sysconfdir)/warewulf/vnfs/include/etc/rc.d/init.d/
++initdir = $(sysconfdir)/warewulf/vnfs/include/etc/init.d/
+ sconfdir = $(sysconfdir)/warewulf/vnfs/include/etc/sysconfig
+ profiledir = $(sysconfdir)/profile.d/
+ dist_conf_DATA = 

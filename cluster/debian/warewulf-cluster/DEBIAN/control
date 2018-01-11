@@ -1,0 +1,15 @@
+Package: warewulf-cluster
+Version: 3.8+git20180111+7f4b80e-1
+Architecture: all
+Maintainer: Maciej Dems <maciej.dems@p.lodz.pl>
+Installed-Size: 59
+Depends: warewulf-common, warewulf-provision, nfs-kernel-server, nfs-common, debootstrap
+Section: multiverse/net
+Priority: optional
+Homepage: https://github.com/warewulf/warewulf3
+Description: A suite of tools for clustering
+ Warewulf >= 3 is a set of utilities designed to better enable
+ utilization and maintenance of clusters or groups of computers.
+ .
+ This package contains tools to facilitate management of a Cluster
+ with Warewulf.

@@ -1,0 +1,4 @@
+etc/profile.d/*
+usr/bin/*
+usr/lib/warewulf/wwinit/*
+usr/share/perl5/Warewulf/Module/Cli/*

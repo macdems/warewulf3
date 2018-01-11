@@ -1,0 +1,7 @@
+Template: warewulf_provision/interface
+Type: select
+Choices: ${choices}
+Default: ${default}
+Description: Select Warewulf network device:
+ What is the default network device that the master will use to
+ communicate with the nodes?

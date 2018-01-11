@@ -1,0 +1,16 @@
+etc/warewulf/provision.conf
+etc/warewulf/livesync.conf
+etc/warewulf/defaults/provision.conf
+#etc/warewulf/filesystem/*
+var/warewulf/*
+usr/share/perl5/Warewulf/Bootstrap.pm
+usr/share/perl5/Warewulf/Provision.pm
+usr/share/perl5/Warewulf/Vnfs.pm
+usr/share/perl5/Warewulf/DSO/*
+usr/share/perl5/Warewulf/Provision
+usr/share/perl5/Warewulf/Event/DynamicHosts.pm
+usr/share/perl5/Warewulf/Event/DefaultProvisionNode.pm
+usr/share/perl5/Warewulf/Event/ProvisionFileDelete.pm
+usr/share/perl5/Warewulf/Module/Cli/Bootstrap.pm
+usr/share/perl5/Warewulf/Module/Cli/Provision.pm
+usr/share/perl5/Warewulf/Module/Cli/Vnfs.pm

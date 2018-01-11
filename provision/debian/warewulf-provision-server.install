@@ -1,0 +1,10 @@
+etc/warewulf/dhcpd-template.conf
+etc/apache2/conf-available/warewulf-httpd.conf
+usr/bin/*
+usr/lib/warewulf/cgi-bin/
+usr/share/warewulf/ipxe/*
+usr/share/perl5/Warewulf/Event/Bootstrap.pm
+usr/share/perl5/Warewulf/Event/Dhcp.pm
+usr/share/perl5/Warewulf/Event/Pxe.pm
+usr/share/perl5/Warewulf/Module/Cli/Pxe.pm
+usr/share/perl5/Warewulf/Module/Cli/Dhcp.pm

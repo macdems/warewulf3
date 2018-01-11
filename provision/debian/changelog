@@ -1,0 +1,41 @@
+warewulf-provision (3.8+git20180111+7f4b80e-1) xenial; urgency=medium
+
+  * Upstream commit 7f4b80e.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Thu, 11 Jan 2018 19:26:19 +0100
+
+warewulf-provision (3.8+git20170815+f608745-1) xenial; urgency=medium
+
+  * Upstream commit f608745.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Tue, 15 Aug 2017 11:13:03 +0200
+
+warewulf-provision (3.8+git20170717+87c5f13-1) xenial; urgency=medium
+
+  * Upstream development commit 87c5f13.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Fri, 21 Jul 2017 07:45:07 +0200
+
+warewulf-provision (3.8+git20170616+e36bc84-1) xenial; urgency=medium
+
+  * Upstream development commit e36bc84.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Fri, 16 Jun 2017 17:34:41 +0200
+
+warewulf-provision (3.8+2gitb758ba2-1) xenial; urgency=medium
+
+  * Upstream development commit b758ba2.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Sat, 10 Jun 2017 18:10:08 +0200
+
+warewulf-provision (3.8+1git5e212e5-1) xenial; urgency=medium
+
+  * Upstream development.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Fri, 09 Jun 2017 12:33:39 +0200
+
+warewulf-provision (3.7+1git43951bf-1) xenial; urgency=medium
+
+  * Upstream git 43951bf.
+
+ -- Maciej Dems <maciej.dems@p.lodz.pl>  Wed, 07 Jun 2017 09:54:20 +0200

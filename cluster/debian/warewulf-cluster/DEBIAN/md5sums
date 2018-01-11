@@ -1,0 +1,15 @@
+c343fd9eb6d917f07111f0c12fffe5df  usr/bin/cluster-env
+5bbad34d2981b9da36d9cf1e8a65e525  usr/bin/wwuseradd
+c08d45eed3a7f526b9cb3c4e6626baea  usr/lib/warewulf/wwinit/30-domain.init
+bb16c437721479d9e4507e2991ea5f0d  usr/lib/warewulf/wwinit/40-authfiles.init
+9e2570ba40fe5f4ab880a1fccb48efcc  usr/lib/warewulf/wwinit/50-dhcp.init
+7fce1abe4f59008770f8c2f2c8a91cb1  usr/lib/warewulf/wwinit/50-nfsd.init
+b6ee7f83b4e06137657e978381c5e59f  usr/lib/warewulf/wwinit/50-ntpd.init
+42ec3cd22bdc4dc39108e3356fc08c82  usr/lib/warewulf/wwinit/50-ssh_keys.init
+33879b4ef9698eda62aa70bae507c95b  usr/lib/warewulf/wwinit/50-tftp.init
+061b3f6a56f1ac2be14641a33c627030  usr/lib/warewulf/wwinit/60-hostfile.init
+436c06047ab26792984a6ceb7e94de54  usr/lib/warewulf/wwinit/90-bootstrap.init
+3531b4379c8a9a59fbd514f1d72f05e4  usr/lib/warewulf/wwinit/91-vnfs.init
+f81eab92034afc593065f97edbb825bd  usr/share/doc/warewulf-cluster/changelog.Debian.gz
+4243e9e988ef7aa1150ce8dbdf7ac0c7  usr/share/doc/warewulf-cluster/copyright
+3d8da1de87b508bb9dfaa3dded90345a  usr/share/perl5/Warewulf/Module/Cli/Ssh.pm

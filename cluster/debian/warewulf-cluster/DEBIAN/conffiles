@@ -1,0 +1,2 @@
+/etc/profile.d/cluster-env.csh
+/etc/profile.d/cluster-env.sh
