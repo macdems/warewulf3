@@ -57,7 +57,8 @@ prechroot() {
         ARCH="amd64"
     fi
 
-    mkdir -p $CHROOTDIR/etc/apt
+    mkdir -p $CHROOTDIR/etc
+    cp -rap /etc/apt $CHROOTDIR/etc
 
     DEB_SRCS_DIRNAME=`dirname $DEB_SRCS`
     mkdir -m 0755 -p $CHROOTDIR/$DEB_SRCS_DIRNAME
