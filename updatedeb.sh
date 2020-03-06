@@ -10,6 +10,6 @@ fi
 for d in common cluster ipmi vnfs provision; do
     cd $d
     dch -v $ver-1 Upstream commit $git.
-    perl -p -i -e s/UNRELEASED/xenial/ debian/changelog
+    perl -p -i -e s/UNRELEASED/bionic/ debian/changelog
     cd ..
 done
